@@ -1,0 +1,13 @@
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+report.html
+*.png
+
+# Java / Maven
+target/
+*.class
+
+# OS
+.DS_Store
