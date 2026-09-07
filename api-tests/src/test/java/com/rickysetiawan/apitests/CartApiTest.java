@@ -34,7 +34,7 @@ class CartApiTest extends BaseApiTest {
         .when()
             .post("/carts")
         .then()
-            .statusCode(200)
+            .statusCode(201)
             .body("id", notNullValue())
             .body("products.size()", equalTo(2))
             .body("products[0].productId", equalTo(1))

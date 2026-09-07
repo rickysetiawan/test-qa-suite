@@ -86,7 +86,7 @@ class ProductsApiTest extends BaseApiTest {
         .when()
             .post("/products")
         .then()
-            .statusCode(200)
+            .statusCode(201)
             .body("id", notNullValue())
             .body("title", equalTo("QA Portfolio Test Product"))
             .body("price", equalTo(19.99f));
