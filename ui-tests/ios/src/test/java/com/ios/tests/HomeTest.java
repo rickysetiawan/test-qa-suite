@@ -16,7 +16,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 @Feature("Home")
 public class HomeTest extends BaseTest {
 
-    @Test (groups = {"smoke", "regression"}, retryAnalyzer = RetryAnalyzer.class)
+    @Test (retryAnalyzer = RetryAnalyzer.class)
     @Description("A valid user lands on the home screen")
     public void validCredentialsLandOnHome() {
         /*User user = UserDataProvider.byType("valid");
