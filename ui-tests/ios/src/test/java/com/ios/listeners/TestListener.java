@@ -1,6 +1,5 @@
 package com.ios.listeners;
 
-import com.acme.mobile.utils.Screenshots;
 import io.qameta.allure.Allure;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
