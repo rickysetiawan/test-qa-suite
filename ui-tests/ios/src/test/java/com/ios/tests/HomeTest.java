@@ -5,6 +5,8 @@ import com.ios.base.BaseTest;
 import com.ios.listeners.RetryAnalyzer;
 import com.ios.pages.HomePage;
 
+import io.qameta.allure.Description;
+import io.qameta.allure.Feature;
 import org.testng.annotations.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -18,6 +20,7 @@ public class HomeTest extends BaseTest {
         /*User user = UserDataProvider.byType("valid");
 
         HomePage home = new LoginPage().loginAs(user.email(), user.password());*/
+        HomePage home = new HomePage();
 
         assertThat(home.isLoaded()).as("home screen loaded").isTrue();
     }
