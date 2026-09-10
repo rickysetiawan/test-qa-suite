@@ -1,9 +1,33 @@
 package com.ios.pages;
 
+import org.openqa.selenium.WebElement;
+
+import io.appium.java_client.pagefactory.iOSXCUITFindBy;
+
 public class HomePage extends BasePage {
+
+    @iOSXCUITFindBy(xpath = "//XCUIElementTypeStaticText[@name=\"LINE Planet Call\"]")
+    private WebElement HomePageTitle;
+
+    @iOSXCUITFindBy(xpath = "//XCUIElementTypeButton[@name=\"1:1 Call\"]")
+    private WebElement oneToOneCallButton;
+
+    @Override
+    public boolean isLoaded() {
+        return isVisible(HomePageTitle);
+    }
+
+    /*@iOSXCUITFindBy(accessibility = "login_submit_button")
+    private WebElement submitButton;
+
+    @iOSXCUITFindBy(iOSNsPredicate = "type == 'XCUIElementTypeStaticText' AND name == 'login_error_message'")
+    private WebElement errorBanner;
+
+    public String errorMessage() {
+        return isVisible(errorBanner, 5) ? errorBanner.getText() : "";
+    }
     
     //XCUIElementTypeImage[@name="gearshape"]
-    //XCUIElementTypeStaticText[@name="LINE Planet Call"]
     //XCUIElementTypeButton[@name="1:1 Call"]
     //XCUIElementTypeButton[@name="Group Call"]
     //XCUIElementTypeStaticText[@name="Setting"]
@@ -24,6 +48,6 @@ public class HomePage extends BasePage {
     //XCUIElementTypeButton[@name="Audio Call"]
     //XCUIElementTypeButton[@name="Video Call"]
     //XCUIElementTypeStaticText[@name="Start Fail"]
-    //XCUIElementTypeButton[@name="OK"]
+    //XCUIElementTypeButton[@name="OK"]*/
 }
 

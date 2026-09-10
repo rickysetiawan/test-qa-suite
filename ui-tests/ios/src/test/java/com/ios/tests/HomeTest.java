@@ -2,13 +2,9 @@ package com.ios.tests;
 
 
 import com.ios.base.BaseTest;
-import com.ios.data.User;
-import com.ios.UserDataProvider;
 import com.ios.listeners.RetryAnalyzer;
 import com.ios.pages.HomePage;
-import com.ios.pages.LoginPage;
-import io.qameta.allure.Description;
-import io.qameta.allure.Feature;
+
 import org.testng.annotations.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;

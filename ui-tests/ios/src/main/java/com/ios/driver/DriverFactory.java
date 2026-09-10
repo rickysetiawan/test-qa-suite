@@ -36,8 +36,6 @@ public final class DriverFactory {
         // Prefer a local build; fall back to launching an app already on the device.
         if (!cfg.appPath().isBlank()) {
             options.setApp(resolveAppPath(cfg.appPath()));
-        } else if (!cfg.bundleId().isBlank()) {
-            options.setBundleId(cfg.bundleId());
         } else {
             throw new IllegalStateException("Set either ios.app.path or ios.bundle.id");
         }
@@ -45,8 +43,6 @@ public final class DriverFactory {
         if (cfg.realDevice()) {
             int port = cfg.wdaLocalPort() + (PORT_OFFSET.getAndIncrement() % 20);
             options.setUdid(requireValue(cfg.udid(), "ios.udid"))
-                    .setXcodeOrgId(requireValue(cfg.teamId(), "ios.team.id"))
-                    .setXcodeSigningId("iPhone Developer")
                     .setWdaLocalPort(port)
                     .setUsePrebuiltWda(true);
             LOG.info("Real device session on udid={} wdaLocalPort={}", cfg.udid(), port);

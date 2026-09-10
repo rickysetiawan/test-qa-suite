@@ -9,10 +9,8 @@ public record TestConfig(
         String platformVersion,
         String deviceName,
         String appPath,
-        String bundleId,
         boolean realDevice,
         String udid,
-        String teamId,
         int wdaLocalPort,
         int wdaLaunchTimeoutSeconds,
         int newCommandTimeoutSeconds,
@@ -21,20 +19,20 @@ public record TestConfig(
 ) {
 
     public TestConfig withDeviceName(String value) {
-        return new TestConfig(serverUrl, platformVersion, value, appPath, bundleId, realDevice,
-                udid, teamId, wdaLocalPort, wdaLaunchTimeoutSeconds, newCommandTimeoutSeconds,
+        return new TestConfig(serverUrl, platformVersion, value, appPath, realDevice,
+                udid, wdaLocalPort, wdaLaunchTimeoutSeconds, newCommandTimeoutSeconds,
                 noReset, explicitWaitSeconds);
     }
 
     public TestConfig withPlatformVersion(String value) {
-        return new TestConfig(serverUrl, value, deviceName, appPath, bundleId, realDevice,
-                udid, teamId, wdaLocalPort, wdaLaunchTimeoutSeconds, newCommandTimeoutSeconds,
+        return new TestConfig(serverUrl, value, deviceName, appPath, realDevice,
+                udid, wdaLocalPort, wdaLaunchTimeoutSeconds, newCommandTimeoutSeconds,
                 noReset, explicitWaitSeconds);
     }
 
     public TestConfig withWdaLocalPort(int value) {
-        return new TestConfig(serverUrl, platformVersion, deviceName, appPath, bundleId, realDevice,
-                udid, teamId, value, wdaLaunchTimeoutSeconds, newCommandTimeoutSeconds,
+        return new TestConfig(serverUrl, platformVersion, deviceName, appPath, realDevice,
+                udid, value, wdaLaunchTimeoutSeconds, newCommandTimeoutSeconds,
                 noReset, explicitWaitSeconds);
     }
 }
