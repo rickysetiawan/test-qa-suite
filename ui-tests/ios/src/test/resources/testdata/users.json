@@ -1,0 +1,14 @@
+[
+  {
+    "type": "valid",
+    "username": "2",
+    "userid": "2",
+    "expectedError": ""
+  },
+  {
+    "type": "invalid",
+    "username": "1",
+    "userid": "1",
+    "expectedError": "Invalid email or password"
+  }
+]
