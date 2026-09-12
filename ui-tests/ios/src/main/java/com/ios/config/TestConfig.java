@@ -15,24 +15,25 @@ public record TestConfig(
         int wdaLaunchTimeoutSeconds,
         int newCommandTimeoutSeconds,
         boolean noReset,
-        int explicitWaitSeconds
+        int explicitWaitSeconds,
+        boolean autoAcceptAlerts
 ) {
 
     public TestConfig withDeviceName(String value) {
         return new TestConfig(serverUrl, platformVersion, value, appPath, realDevice,
                 udid, wdaLocalPort, wdaLaunchTimeoutSeconds, newCommandTimeoutSeconds,
-                noReset, explicitWaitSeconds);
+                noReset, explicitWaitSeconds, autoAcceptAlerts);
     }
 
     public TestConfig withPlatformVersion(String value) {
         return new TestConfig(serverUrl, value, deviceName, appPath, realDevice,
                 udid, wdaLocalPort, wdaLaunchTimeoutSeconds, newCommandTimeoutSeconds,
-                noReset, explicitWaitSeconds);
+                noReset, explicitWaitSeconds, autoAcceptAlerts);
     }
 
     public TestConfig withWdaLocalPort(int value) {
         return new TestConfig(serverUrl, platformVersion, deviceName, appPath, realDevice,
                 udid, value, wdaLaunchTimeoutSeconds, newCommandTimeoutSeconds,
-                noReset, explicitWaitSeconds);
+                noReset, explicitWaitSeconds, autoAcceptAlerts);
     }
 }

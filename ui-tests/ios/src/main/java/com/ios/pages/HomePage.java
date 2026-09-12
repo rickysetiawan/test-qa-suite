@@ -1,7 +1,6 @@
 package com.ios.pages;
 
 import org.openqa.selenium.WebElement;
-
 import io.appium.java_client.pagefactory.iOSXCUITFindBy;
 
 public class HomePage extends BasePage {
@@ -12,31 +11,17 @@ public class HomePage extends BasePage {
     @iOSXCUITFindBy(xpath = "//XCUIElementTypeButton[@name=\"1:1 Call\"]")
     private WebElement oneToOneCallButton;
 
+    @iOSXCUITFindBy(xpath = "//XCUIElementTypeImage[@name=\"gearshape\"]")
+    private WebElement configButton;
+
     @Override
     public boolean isLoaded() {
-        return isVisible(HomePageTitle);
-    }
-
-    /*@iOSXCUITFindBy(accessibility = "login_submit_button")
-    private WebElement submitButton;
-
-    @iOSXCUITFindBy(iOSNsPredicate = "type == 'XCUIElementTypeStaticText' AND name == 'login_error_message'")
-    private WebElement errorBanner;
-
-    public String errorMessage() {
-        return isVisible(errorBanner, 5) ? errorBanner.getText() : "";
+        return isVisible(HomePageTitle) && isVisible(oneToOneCallButton) && isVisible(configButton);
     }
     
-    //XCUIElementTypeImage[@name="gearshape"]
-    //XCUIElementTypeButton[@name="1:1 Call"]
-    //XCUIElementTypeButton[@name="Group Call"]
-    //XCUIElementTypeStaticText[@name="Setting"]
-
-    //XCUIElementTypeTextField[@value="Set your name"]
-    //XCUIElementTypeTextField[@value="Set your user id"]
-    //XCUIElementTypeButton[@name="Save"]
-    //XCUIElementTypeButton[@name="RESET NOW"]
-    //XCUIElementTypeButton[@name="chevron.left"]
+    public void tapConfigButton() {
+        configButton.click();
+    }
 
 
     //XCUIElementTypeButton[@name="Basic Call"]

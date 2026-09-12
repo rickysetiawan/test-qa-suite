@@ -44,7 +44,8 @@ public final class ConfigReader {
                 Integer.parseInt(get(props, "wda.launch.timeout.seconds")),
                 Integer.parseInt(get(props, "appium.new.command.timeout.seconds")),
                 Boolean.parseBoolean(get(props, "ios.no.reset")),
-                Integer.parseInt(get(props, "wait.explicit.seconds"))
+                Integer.parseInt(get(props, "wait.explicit.seconds")),
+                Boolean.parseBoolean(get(props, "ios.autoaccept.alerts"))
         );
     }
 
