@@ -23,7 +23,6 @@ public class HomePage extends BasePage {
         configButton.click();
     }
 
-
     //XCUIElementTypeButton[@name="Basic Call"]
     //XCUIElementTypeButton[@name="chevron.left"]
     //XCUIElementTypeStaticText[@name="1:1 Call"]
