@@ -1,0 +1,23 @@
+{
+  "name": "test-qa-suite",
+  "version": "1.0.0",
+  "description": "A single, coherent test suite spanning the four layers a senior QA/SDET role actually touches — UI, API, performance, and data — wired together with CI/CD. Built as a portfolio project against public demo targets: [saucedemo.com](https://www.saucedemo.com) (UI) and [fakestoreapi.com](https://fakestoreapi.com) (API/performance).",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rickysetiawan/test-qa-suite.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/rickysetiawan/test-qa-suite/issues"
+  },
+  "homepage": "https://github.com/rickysetiawan/test-qa-suite#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.63.0",
+    "@types/node": "^22.20.3"
+  }
+}

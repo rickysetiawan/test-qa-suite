@@ -11,3 +11,11 @@ target/
 
 # OS
 .DS_Store
+
+# Playwright
+ui-tests/web/node_modules
+/ui-tests/web/test-results/
+/ui-tests/web/playwright-report/
+/ui-tests/web/blob-report/
+/ui-tests/web/playwright/.cache/
+/ui-tests/web/playwright/.auth/

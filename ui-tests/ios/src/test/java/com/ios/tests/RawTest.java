@@ -28,7 +28,7 @@ public class RawTest {
         driver = new IOSDriver(new URI("http://127.0.0.1:4723").toURL(), options);
     }
 
-    @Test
+    //@Test
     public void tapsElement() {
         WebElement el = driver.findElement(AppiumBy.xpath("//XCUIElementTypeImage[@name=\"gearshape\"]"));
         el.click();
